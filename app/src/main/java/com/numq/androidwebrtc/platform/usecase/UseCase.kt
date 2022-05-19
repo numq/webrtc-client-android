@@ -10,12 +10,12 @@ abstract class UseCase<in T, out R> : CoroutineScope {
     override val coroutineContext: CoroutineContext
         get() = Job() + Dispatchers.IO
 
-    abstract fun execute(args: T): Either<Exception, R>
+    abstract fun execute(arg: T): Either<Exception, R>
 
-    operator fun invoke(args: T, onResult: (Either<Exception, R>) -> Unit = {}) =
+    operator fun invoke(arg: T, onResult: (Either<Exception, R>) -> Unit = {}) =
         launch {
             val result = async {
-                execute(args)
+                execute(arg)
             }
             withContext(Dispatchers.Main) {
                 onResult(result.await().tap {
