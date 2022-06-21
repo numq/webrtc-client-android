@@ -1,14 +1,18 @@
-# Video chat backend
+# Video chat Android client
 
-**Implementation of an Omegle-like video chat backend using WebRTC standard and Clean Architecture principles.**
+**Implementation of an Omegle-like video chat Android client using WebRTC standard and Clean Architecture principles.**
 
 ## Tech:
-- JavaScript
-- RxJS
-- React.js
-- Redux (Redux Toolkit)
-- WebSocket
+
+- Kotlin
+ - Coroutines (Flow)
+- Arrow-KT
+- Hilt
+- WebSocket (OkHttp)
 - WebRTC
+- Android
+- Jetpack Compose
+- Accompanist
 
 **This is one of the WebRTC projects, links to which you can find below:**
 
