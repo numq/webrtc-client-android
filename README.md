@@ -5,7 +5,7 @@
 ## Tech:
 
 - Kotlin
- - Coroutines (Flow)
+- Coroutines (Flow)
 - Arrow-KT
 - Hilt
 - WebSocket (OkHttp)
